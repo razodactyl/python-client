@@ -27,7 +27,7 @@ Example:
 
     >>> from coreapi.utils import File
     >>> upload = File('example.csv', 'a,b,c\n1,2,3\n4,5,6\n')
-    >>> data = client.action(document, ['store', 'upload_media'], params={'upload': upload})
+    >>> data = client.action(schema, ['store', 'upload_media'], params={'upload': upload}, encoding="multipart/form-data")
 
 ### DownloadedFile
 
